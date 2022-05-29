@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Company</title>
+</head>
+<body>
+    <h1>Exploring Events</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fuga?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum reiciendis unde nulla in? Pariatur?</p>
+    <button id="first-btn">Click Me</button>
+    <button id="second-btn">Click Me</button>
+    <button id="third-btn">Click Me</button>
+    <button id="last-btn">Click Me</button>
+
+    <script>
+        document.getElementById('last-btn').addEventListener('click', function(){
+            document.body.style.color = 'coral';
+        })
+        document.getElementById('first-btn').addEventListener('click',function(){
+            document.body.style.color = 'tomato';
+        })
+        document.getElementById('second-btn').addEventListener('click', function(){
+            document.body.style.color = 'green';
+        })
+        document.getElementById('third-btn').addEventListener('click', function(){
+            document.body.style.color = 'blue';
+        })
+    </script>
+
+
+</body>
+</html>

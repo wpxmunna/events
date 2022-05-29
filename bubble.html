@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="myList">
+            <li id="first" class="item">Lorem ipsum dolor sit amet.</li>
+            <li class="item">Eligendi maiores delectus fugit quasi?</li>
+            <li class="item">Quia voluptatem illum consectetur voluptatibus.</li>
+            <li class="item">Non sunt doloremque reprehenderit ullam!</li>
+            <li class="item">Nobis et quasi reprehenderit error.</li>
+        </ul>
+        <button id="addNew">Click Here</button>
+        <button id="remove-btn">Remove It</button>
+    </div>
+    <script>
+        document.getElementById('addNew').addEventListener('click', function(event){
+            const itemParent = document.getElementById('myList');
+            const newItem = document.createElement('li');
+            newItem.innerText = 'Brand New Item';
+            itemParent.appendChild(newItem);
+        })
+        // document.getElementById('remove-btn').addEventListener('click', function(event){
+        //     const itemParent = document.getElementById('myList');
+        //     const removeItem = this.childNodes.childNodes;
+        //     event.target.parentNode.removeChild(event.target);
+            
+        // })
+        document.getElementById('myList').addEventListener('click', function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+        // const items = document.getElementsByClassName('item');
+        // for (let i = 0; i < items.length; i++) {
+        //     const item = items[i];
+        //     item.addEventListener('click', function(event){
+        //         // console.log(this, event.target.innerText);
+        //         // console.log(event.target.innerText);
+        //         // console.log(event.target.parentNode);
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+        // document.getElementById('first').addEventListener('click', function(){
+            // console.log('First Item Clicked');
+            // event.stopPropagation();
+        // })
+        // document.getElementById('myList').addEventListener('click', function(){
+            // console.log('UL Item Clicked');
+        // })
+        // document.getElementById('container').addEventListener('click', function(){
+            console.log('Container Item Clicked');
+        // })
+    </script>
+</body>
+</html>
